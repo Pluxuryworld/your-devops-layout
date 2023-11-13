@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf") format("ttf");
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  color: #fff;
+  background: #000;
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+ul li,
+ol li {
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  z-index: 4;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 648px;
+    padding: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    width: 870px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1126px;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: 1300px;
+  }
+}
+@media (min-width: 1750px) {
+  .container {
+    width: 1662px;
+  }
+}
