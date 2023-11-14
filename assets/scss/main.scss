@@ -1,8 +1,9 @@
 @import 'libs/vars';
 
-
 .heading {
   background: $background;
+  overflow: hidden;
+  position: relative;
 
   &__body {
     padding: 35px 0px 100px;
@@ -11,10 +12,23 @@
     justify-content: center;
     flex-direction: column;
 
-    .background {
-      display: none;
+    @media (min-width: 1440px) {
+      width: 55%;
+      justify-content: flex-start;
     }
 
+  }
+
+  .background {
+    display: none;
+    @media (min-width: 1440px) {
+      display: flex;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      padding-top: 40px;
+    }
   }
 
   &__body-text {
@@ -22,6 +36,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+
+
+    @media (min-width: 1440px) {
+      align-items: flex-start;
+    }
 
     h2 {
       color: $text-color;
@@ -32,12 +51,28 @@
       font-weight: 700;
       line-height: normal;
       padding: 0px 30px;
+
+      @media (min-width: 1440px) {
+        font-size: 60px;
+        padding: 20px 0 30px 0;
+        width: 125%;
+        justify-content: flex-start;
+        display: flex;
+      }
     }
 
     img {
       padding: 20px 0px 40px;
       width: 70%;
       display: block;
+
+      @media (min-width: 1024px) {
+        width: 40%;
+      }
+
+      @media (min-width: 1440px) {
+        display: none;
+      }
 
     }
 
@@ -50,6 +85,9 @@
       font-weight: 700;
       line-height: normal;
 
+      @media (min-width: 1440px) {
+        font-size: 27px;
+      }
     }
 
     p {
@@ -60,6 +98,13 @@
       font-weight: 400;
       line-height: 24px;
       padding: 40px 1px 40px 0px;
+
+      @media (min-width: 1440px) {
+        font-family: $Cabin;
+        width: 85%;
+        line-height: 25px;
+        font-size: 18px;
+      }
     }
 
     a {
@@ -78,6 +123,11 @@
       font-style: normal;
       font-weight: 700;
       line-height: normal;
+
+      @media (min-width: 1024px) {
+        width: 50%;
+
+      }
     }
 
   }
@@ -95,6 +145,10 @@
     flex-direction: column;
     padding: 60px 0;
 
+    @media (min-width: 1440px) {
+      padding: 100px 0px;
+    }
+
     h2 {
       color: $text-color;
       text-align: center;
@@ -104,6 +158,10 @@
       font-weight: 800;
       line-height: normal;
       padding-bottom: 40px;
+
+      @media (min-width: 1440px) {
+        padding-bottom: 60px;
+      }
     }
   }
 
@@ -113,9 +171,26 @@
     justify-content: center;
     flex-direction: column;
 
+    @media (min-width: 1440px) {
+      flex-direction: row;
+      gap: 50px;
+      padding-bottom: 60px;
+      align-items: flex-start;
+    }
+
     img {
       width: 30%;
       padding-top: 40px;
+
+      @media (min-width: 1024px) {
+        width: 10%;
+      }
+      @media (min-width: 1440px) {
+        width: 12%;
+        padding: 0;
+        top: 0;
+      }
+
     }
   }
 
@@ -125,6 +200,11 @@
     justify-content: center;
     flex-direction: column;
 
+    @media (min-width: 1440px) {
+      width: 60%;
+      align-items: flex-start;
+    }
+
     h4 {
       padding: 20px;
       color: $text-color;
@@ -133,6 +213,11 @@
       font-style: normal;
       font-weight: 700;
       line-height: 15px;
+
+      @media (min-width: 1440px) {
+        padding: 5px 0px;
+        padding-bottom: 20px;
+      }
     }
 
     p {
@@ -142,14 +227,29 @@
       font-style: normal;
       font-weight: 400;
       line-height: 24px;
-    }
 
+      @media (min-width: 1440px) {
+        line-height: 25px;
+      }
+    }
   }
 
 }
 
+
 .plans {
   background: $background;
+
+  h2 {
+    color: $text-color;
+    text-align: center;
+    font-family: $NanumGothic;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 80%;
+  }
 
   &__info {
     display: flex;
@@ -159,38 +259,22 @@
     gap: 30px;
     padding: 60px 0px;
 
-    h2 {
-      color: $text-color;
-      text-align: center;
-      font-family: $NanumGothic;
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: normal;
-      width: 80%;
-      padding-bottom: 10px;
+    @media (min-width: 1024px) {
+      flex-direction: row;
     }
 
-    a {
-      display: flex;
-      padding: 20px;
-      justify-content: center;
-      align-items: center;
-      border-radius: 5px;
-      color: $white;
-      text-align: center;
-      font-family: $NanumGothic;
-      font-size: 25px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: normal;
-      border: 4px solid rgba(0, 0, 0, 0.00);
-      background: $red-accent;
-      width: 100%;
+    @media (min-width: 1440px) {
+      padding: 0px 0;
     }
+
+
+
   }
 
   &__card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     border-radius: 10px;
     background: $light-blue-color;
     width: 100%;
@@ -228,6 +312,10 @@
     gap: 20px;
 
     padding: 30px 60px 60px;
+
+    @media (min-width: 1440px) {
+      padding: 30px 30px 60px;
+    }
 
     h4 {
       color: $text-color;
@@ -268,16 +356,11 @@
     flex-direction: column;
     gap: 45px;
 
-    h2 {
-      color: $text-color;
-      text-align: center;
-      font-family: $Cabin;
-      font-size: 40px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 80px;
-      padding-bottom: 5px;
+    @media (min-width: 1440px) {
+      flex-direction: row;
+      align-items: stretch
     }
+
   }
 
   &__card {
@@ -288,9 +371,23 @@
     justify-content: center;
     flex-direction: column;
 
+    @media (min-width: 1440px) {
+      width: calc(33% - 45px);
+
+    }
+
+
     img {
       width: 50%;
       padding: 44px 0 22px;
+
+      @media (min-width: 1024px) {
+        width: 30%;
+      }
+      @media (min-width: 1440px) {
+        width: 20%;
+      }
+
     }
 
 
@@ -328,6 +425,11 @@
   &__wrapper {
     padding: 50px 0px;
     width: 100%;
+
+    @media (min-width: 1440px) {
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__body {
@@ -340,12 +442,19 @@
     justify-content: center;
     padding: 60px 0px 80px;
 
+    @media (min-width: 1440px) {
+      width: 50%;
+    }
+
     form {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
 
+      @media (min-width: 1440px) {
+        width: 70%;
+      }
 
       button {
         border-radius: 5px;
@@ -374,6 +483,10 @@
       font-weight: 800;
       line-height: normal;
       padding-bottom: 15px;
+
+      @media (min-width: 1440px) {
+        padding-bottom: 60px;
+      }
     }
 
 
@@ -398,12 +511,72 @@
       font-weight: 400;
       line-height: 25px;
       resize: none;
+
+      @media (min-width: 1440px) {
+        width: 100%;
+      }
     }
   }
 
 }
 
 
+.absolute {
+  position: absolute;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 0 60px 0;
+
+  h2 {
+    color: $text-color;
+    text-align: center;
+    font-family: $Cabin;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 80px;
+    padding-bottom: 5px;
+  }
+
+  a {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: $white;
+    text-align: center;
+    font-family: $NanumGothic;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border: 4px solid rgba(0, 0, 0, 0.00);
+    background: $red-accent;
+    width: 100%;
+
+    @media (min-width: 1024px) {
+      width: 70%;
+    }
+
+    @media (min-width: 1440px) {
+      width: 25%;
+    }
+
+  }
+
+}
+
+.width{
+  width: 9% !important;
+}
+
 .uncolored-bg {
   background: $background;
 }
+
+

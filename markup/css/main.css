@@ -1,4 +1,6 @@
 .heading {
+  position: relative;
+  overflow: hidden;
   background: #E6F9FF;
 }
 .heading__body {
@@ -8,14 +10,35 @@
   align-items: center;
   justify-content: center;
 }
-.heading__body .background {
+@media (min-width: 1440px) {
+  .heading__body {
+    width: 55%;
+    justify-content: flex-start;
+  }
+}
+.heading .background {
   display: none;
+}
+@media (min-width: 1440px) {
+  .heading .background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    height: 100%;
+    padding-top: 40px;
+  }
 }
 .heading__body-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 1440px) {
+  .heading__body-text {
+    align-items: flex-start;
+  }
 }
 .heading__body-text h2 {
   font-family: "Cabin", sans-serif;
@@ -27,10 +50,29 @@
   text-align: center;
   color: #04234F;
 }
+@media (min-width: 1440px) {
+  .heading__body-text h2 {
+    font-size: 60px;
+    display: flex;
+    width: 125%;
+    padding: 20px 0 30px 0;
+    justify-content: flex-start;
+  }
+}
 .heading__body-text img {
   display: block;
   width: 70%;
   padding: 20px 0 40px;
+}
+@media (min-width: 1024px) {
+  .heading__body-text img {
+    width: 40%;
+  }
+}
+@media (min-width: 1440px) {
+  .heading__body-text img {
+    display: none;
+  }
 }
 .heading__body-text h4 {
   font-family: "Cabin", sans-serif;
@@ -41,6 +83,11 @@
   text-align: center;
   color: #04234F;
 }
+@media (min-width: 1440px) {
+  .heading__body-text h4 {
+    font-size: 27px;
+  }
+}
 .heading__body-text p {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 20px;
@@ -49,6 +96,14 @@
   line-height: 24px;
   padding: 40px 1px 40px 0;
   color: #04234F;
+}
+@media (min-width: 1440px) {
+  .heading__body-text p {
+    font-family: "Cabin", sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    width: 85%;
+  }
 }
 .heading__body-text a {
   font-family: "Nanum Gothic", sans-serif;
@@ -67,6 +122,11 @@
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1024px) {
+  .heading__body-text a {
+    width: 50%;
+  }
+}
 
 .info {
   background: linear-gradient(0deg, #8BDFFE 0%, #8BDFFE 100%), #E7F9FF;
@@ -78,6 +138,11 @@
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1440px) {
+  .info__body {
+    padding: 100px 0;
+  }
+}
 .info__body h2 {
   font-family: "Nanum Gothic", sans-serif;
   font-size: 28px;
@@ -88,21 +153,52 @@
   text-align: center;
   color: #04234F;
 }
+@media (min-width: 1440px) {
+  .info__body h2 {
+    padding-bottom: 60px;
+  }
+}
 .info__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1440px) {
+  .info__item {
+    flex-direction: row;
+    padding-bottom: 60px;
+    gap: 50px;
+    align-items: flex-start;
+  }
+}
 .info__item img {
   width: 30%;
   padding-top: 40px;
+}
+@media (min-width: 1024px) {
+  .info__item img {
+    width: 10%;
+  }
+}
+@media (min-width: 1440px) {
+  .info__item img {
+    top: 0;
+    width: 12%;
+    padding: 0;
+  }
 }
 .info__item-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 1440px) {
+  .info__item-text {
+    width: 60%;
+    align-items: flex-start;
+  }
 }
 .info__item-text h4 {
   font-family: "Cabin", sans-serif;
@@ -113,6 +209,12 @@
   padding: 20px;
   color: #04234F;
 }
+@media (min-width: 1440px) {
+  .info__item-text h4 {
+    padding: 5px 0;
+    padding-bottom: 20px;
+  }
+}
 .info__item-text p {
   font-family: "Cabin", sans-serif;
   font-size: 18px;
@@ -121,9 +223,24 @@
   line-height: 24px;
   color: #04234F;
 }
+@media (min-width: 1440px) {
+  .info__item-text p {
+    line-height: 25px;
+  }
+}
 
 .plans {
   background: #E6F9FF;
+}
+.plans h2 {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  font-style: normal;
+  line-height: normal;
+  width: 80%;
+  text-align: center;
+  color: #04234F;
 }
 .plans__info {
   display: flex;
@@ -133,40 +250,25 @@
   justify-content: center;
   gap: 30px;
 }
-.plans__info h2 {
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  font-style: normal;
-  line-height: normal;
-  width: 80%;
-  padding-bottom: 10px;
-  text-align: center;
-  color: #04234F;
+@media (min-width: 1024px) {
+  .plans__info {
+    flex-direction: row;
+  }
 }
-.plans__info a {
-  font-family: "Nanum Gothic", sans-serif;
-  font-size: 25px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: normal;
-  display: flex;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
-  border: 4px solid rgba(0, 0, 0, 0);
-  border-radius: 5px;
-  background: #E33569;
-  justify-content: center;
-  align-items: center;
+@media (min-width: 1440px) {
+  .plans__info {
+    padding: 0 0;
+  }
 }
 .plans__card {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   padding: 35px 0;
   border-radius: 10px;
   background: #8BDFFE;
+  align-items: center;
 }
 .plans__card h1 {
   font-family: "Cabin", sans-serif;
@@ -194,6 +296,11 @@
   align-items: flex-start;
   justify-content: center;
   gap: 20px;
+}
+@media (min-width: 1440px) {
+  .plans__card-text {
+    padding: 30px 30px 60px;
+  }
 }
 .plans__card-text h4 {
   font-family: "Cabin", sans-serif;
@@ -226,15 +333,11 @@
   justify-content: center;
   gap: 45px;
 }
-.mentors__info h2 {
-  font-family: "Cabin", sans-serif;
-  font-size: 40px;
-  font-weight: 700;
-  font-style: normal;
-  line-height: 80px;
-  padding-bottom: 5px;
-  text-align: center;
-  color: #04234F;
+@media (min-width: 1440px) {
+  .mentors__info {
+    flex-direction: row;
+    align-items: stretch;
+  }
 }
 .mentors__card {
   display: flex;
@@ -244,9 +347,24 @@
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1440px) {
+  .mentors__card {
+    width: calc(33% - 45px);
+  }
+}
 .mentors__card img {
   width: 50%;
   padding: 44px 0 22px;
+}
+@media (min-width: 1024px) {
+  .mentors__card img {
+    width: 30%;
+  }
+}
+@media (min-width: 1440px) {
+  .mentors__card img {
+    width: 20%;
+  }
 }
 .mentors__card p {
   font-family: "Cabin", sans-serif;
@@ -276,6 +394,12 @@
   width: 100%;
   padding: 50px 0;
 }
+@media (min-width: 1440px) {
+  .form__wrapper {
+    display: flex;
+    justify-content: center;
+  }
+}
 .form__body {
   display: flex;
   display: flex;
@@ -286,11 +410,21 @@
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 1440px) {
+  .form__body {
+    width: 50%;
+  }
+}
 .form__body form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1440px) {
+  .form__body form {
+    width: 70%;
+  }
 }
 .form__body form button {
   font-family: "Cabin", sans-serif;
@@ -317,6 +451,11 @@
   text-align: center;
   color: #04234F;
 }
+@media (min-width: 1440px) {
+  .form__body h2 {
+    padding-bottom: 60px;
+  }
+}
 .form__body-fields {
   display: flex;
   flex-direction: column;
@@ -337,6 +476,64 @@
   color: #000;
   border: none;
   border-radius: 10px;
+}
+@media (min-width: 1440px) {
+  .form__body-fields input,
+  .form__body-fields textarea {
+    width: 100%;
+  }
+}
+
+.absolute {
+  position: absolute;
+}
+
+.center {
+  display: flex;
+  padding: 60px 0 60px 0;
+  align-items: center;
+  justify-content: center;
+}
+.center h2 {
+  font-family: "Cabin", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 80px;
+  padding-bottom: 5px;
+  text-align: center;
+  color: #04234F;
+}
+.center a {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  border: 4px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  background: #E33569;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .center a {
+    width: 70%;
+  }
+}
+@media (min-width: 1440px) {
+  .center a {
+    width: 25%;
+  }
+}
+
+.width {
+  width: 9% !important;
 }
 
 .uncolored-bg {

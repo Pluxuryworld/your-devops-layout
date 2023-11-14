@@ -10,12 +10,15 @@
     align-items: center;
     flex-direction: row;
     color: $text-color;
-    padding: 20px 0px
+    padding: 20px 0px;
+    justify-content: space-between;
   }
 
   &__logo {
     display: none;
-
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 }
 
@@ -31,6 +34,14 @@
     justify-content: flex-start;
     gap: 10px;
     width: 100%;
+    @media (min-width: 1024px) {
+     flex-wrap: nowrap;
+    }
+
+    @media (min-width: 1440px) {
+      gap: 70px;
+      padding-right: 40px;
+    }
   }
 
   &__item {
@@ -49,6 +60,11 @@
     font-weight: 800;
     line-height: normal;
     padding: 0px 10px;
+
+    @media (min-width: 1440px) {
+      font-size: 30px;
+    }
+
   }
 
 
