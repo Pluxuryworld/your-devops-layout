@@ -1,6 +1,101 @@
+.header {
+  background-color: #effcff;
+  filter: drop-shadow(5.9000000954px 6.8000001907px 19px rgba(4, 35, 79, 0.08));
+}
+.header__body {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #04234F;
+  padding: 20px 0px;
+}
+.header__logo {
+  display: none;
+}
+
+.menu__body {
+  padding: 0px;
+}
+.menu__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+}
+.menu__item {
+  width: calc(33% - 10px);
+  display: flex;
+  justify-content: center;
+}
+.menu__link {
+  color: #04234F;
+  text-align: center;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding: 0px 10px;
+}
+
+.active-nav {
+  color: #E33569;
+}
+
+.footer {
+  background-color: #D7F5FF;
+}
+.footer__body {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  color: #04234F;
+  padding: 20px 0px;
+}
+.footer__logo {
+  display: block;
+}
+
+.socials__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  width: 100%;
+}
+.socials__item {
+  height: 100%;
+  width: 16%;
+}
+.socials__img {
+  height: 100%;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
 @font-face {
   font-family: "Montserrat";
-  src: url("../fonts/Montserrat.ttf") format("ttf");
+  src: url("../fonts/Montserrat.ttf");
+}
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("../fonts/NanumGothic.ttf");
+}
+@font-face {
+  font-family: "Cabin";
+  src: url("../fonts/Cabin.ttf");
 }
 * {
   font-family: "Montserrat", sans-serif;
@@ -37,8 +132,8 @@ h6 {
 body {
   position: relative;
   height: 100%;
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #fff;
 }
 
 html {
@@ -57,7 +152,7 @@ ol li {
   z-index: 4;
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 @media (min-width: 768px) {
   .container {

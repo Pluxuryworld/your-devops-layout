@@ -1,1 +1,53 @@
-footer {}
+@import './vars';
+
+
+.footer {
+  background-color: $footer;
+
+
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    color: $text-color;
+    padding: 20px 0px
+  }
+
+  &__logo {
+    display: block;
+  }
+
+}
+
+
+.socials {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__item {
+    height: 100%;
+    width: 16%;
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}

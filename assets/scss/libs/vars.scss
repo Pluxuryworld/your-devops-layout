@@ -1,14 +1,22 @@
-$primary-text: #000;
-$green: #ADFF58;
-$white: #fff;
-$gray-100: #DBDBDB;
-$gray-200: #D9D9D9;
-$gray-300: #A5A8AE;
-$background: #1F2937;
-$background2: #111827;
-$border: #35465E;
+$background: #E6F9FF;
+$dark-background: linear-gradient(0deg, #8BDFFE 0%, #8BDFFE 100%), #E7F9FF;
+$dark-blue: linear-gradient(156deg, rgba(67, 127, 236, 0.80) 0.24%, rgba(53, 111, 216, 0.80) 38.05%, rgba(24, 78, 174, 0.80) 99.76%);
+$header-background: #effcff;
+$footer: #D7F5FF;
+$light-blue-color: #8BDFFE;
+$active-card-color: #FFFFFF;
+$form-color: #8BDFFE;
+$text-color: #04234F;
+$red-accent: #E33569;
 $black: #000;
+$white: #fff;
 
 
 $montserrat: 'Montserrat',
+sans-serif;
+
+$NanumGothic: 'Nanum Gothic',
+sans-serif;
+
+$Cabin: 'Cabin',
 sans-serif;

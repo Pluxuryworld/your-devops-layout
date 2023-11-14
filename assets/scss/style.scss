@@ -3,31 +3,42 @@
 @import "libs/footer";
 
 @font-face {
-    font-family: "Montserrat";
-    src: url("../fonts/Montserrat.ttf") format("ttf")
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf");
+
+}
+
+@font-face {
+  font-family: "Nanum Gothic";
+  src: url("../fonts/NanumGothic.ttf");
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("../fonts/Cabin.ttf");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    list-style: none;
-    font-weight: 400;
-    text-decoration: none;
-    font-family: $montserrat;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  font-weight: 400;
+  text-decoration: none;
+  font-family: $montserrat;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 h1,
@@ -36,53 +47,53 @@ h3,
 h4,
 h5,
 h6 {
-    margin: 0;
+  margin: 0;
 }
 
 body {
-    position: relative;
-    height: 100%;
-    color: $white;
-    background: $black;
+  position: relative;
+  height: 100%;
+  color: $black;
+  background: $white;
 
 }
 
 html {
-    box-sizing: border-box;
-    position: relative;
-    height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
 }
 
 ul li,
 ol li {
-    margin: 0;
+  margin: 0;
 }
 
 .container {
-    z-index: 4;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 20px;
-    position: relative;
+  z-index: 4;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+  position: relative;
 
-    @media (min-width: 768px) {
-        padding: 0;
-        width: 648px;
-    }
+  @media (min-width: 768px) {
+    padding: 0;
+    width: 648px;
+  }
 
-    @media (min-width: 1024px) {
-        width: 870px;
-    }
+  @media (min-width: 1024px) {
+    width: 870px;
+  }
 
-    @media (min-width: 1200px) {
-        width: 1126px;
-    }
+  @media (min-width: 1200px) {
+    width: 1126px;
+  }
 
-    @media (min-width: 1440px) {
-        width: 1300px
-    }
+  @media (min-width: 1440px) {
+    width: 1300px
+  }
 
-    @media (min-width: 1750px) {
-        width: 1662px;
-    }
+  @media (min-width: 1750px) {
+    width: 1662px;
+  }
 }
